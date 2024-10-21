@@ -1,9 +1,18 @@
 package com.Book.ApiProject.ApiBookProject.Entities;
 
+import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
 
-@Component
+
+@Entity
+@Table(name = "books")
 public class Books {
+
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "books_id")
     private int id;       // changed to camelCase
     private String title; // changed to camelCase
     private String author;
